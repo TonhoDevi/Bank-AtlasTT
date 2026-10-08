@@ -1,0 +1,13 @@
+spring:
+  config:
+    # Em dev as variáveis vêm do arquivo .env na raiz (em prod vêm do ambiente)
+    import: optional:file:.env[.properties]
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
