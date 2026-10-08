@@ -1,0 +1,10 @@
+# Sem defaults e sem .env: todas as variáveis (DB_*) devem vir do ambiente.
+# Se alguma faltar, a aplicação não sobe.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
